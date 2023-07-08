@@ -1,0 +1,215 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6703651763202264335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6703651763202264333}
+  - component: {fileID: 6703651763202264334}
+  m_Layer: 0
+  m_Name: Sound Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6703651763202264333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6703651763202264335}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.132733, y: 3.070913, z: -1521.9323}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6703651763202264334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6703651763202264335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbae1e97889be8e409842541e461ec93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24300002, guid: 676ae39e836d9244a8b5c337ff10ad3c, type: 2}
+  sounds:
+  - name: Menu
+    clip: {fileID: 8300000, guid: 6983c2c76248a1b41b0b778576cd83ed, type: 3}
+    volume: 0.75
+    pitch: 1
+    loop: 1
+    single: 0
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: Story
+    clip: {fileID: 8300000, guid: 7b37790cb999f2d449c55e67c4133294, type: 3}
+    volume: 0.75
+    pitch: 1
+    loop: 1
+    single: 1
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: Level 1
+    clip: {fileID: 8300000, guid: 0a3cd3aaf86ec144594770eea849cc1e, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    single: 1
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: GameOver
+    clip: {fileID: 8300000, guid: 25623db78f3de57498098dd3951d7183, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    single: 1
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: ArcherAttack
+    clip: {fileID: 8300000, guid: 3cd1337ffca81384b8536761adf5a3ea, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    single: 0
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: ArcherJump
+    clip: {fileID: 8300000, guid: 846f76ac78e4245408d61782b6801d7a, type: 3}
+    volume: 1.2
+    pitch: 1
+    loop: 0
+    single: 0
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: ArcherMove
+    clip: {fileID: 8300000, guid: 846f76ac78e4245408d61782b6801d7a, type: 3}
+    volume: 1.2
+    pitch: 1
+    loop: 0
+    single: 0
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: WarriorAttack
+    clip: {fileID: 8300000, guid: 7d446e4d58de7384abf4c0a2943b62f6, type: 3}
+    volume: 1.2
+    pitch: 1
+    loop: 0
+    single: 0
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: WarriorJump
+    clip: {fileID: 8300000, guid: 846f76ac78e4245408d61782b6801d7a, type: 3}
+    volume: 1.2
+    pitch: 1
+    loop: 0
+    single: 0
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: WarriorMove
+    clip: {fileID: 8300000, guid: 399873a55a3c096408ef885b61748b81, type: 3}
+    volume: 1.2
+    pitch: 1
+    loop: 0
+    single: 0
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: MageAttack
+    clip: {fileID: 8300000, guid: 1749c361f89a0074c84f674aac8da208, type: 3}
+    volume: 1.2
+    pitch: 1
+    loop: 0
+    single: 0
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: MageJump
+    clip: {fileID: 8300000, guid: 846f76ac78e4245408d61782b6801d7a, type: 3}
+    volume: 1.2
+    pitch: 1
+    loop: 0
+    single: 0
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: MageMove
+    clip: {fileID: 8300000, guid: cc664c3b7df30bf489ccddd309f8a02f, type: 3}
+    volume: 1.2
+    pitch: 1
+    loop: 0
+    single: 0
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: Orc
+    clip: {fileID: 8300000, guid: 26f1b5a3e112f0e43bd422d988c02cb3, type: 3}
+    volume: 1.2
+    pitch: 1
+    loop: 0
+    single: 0
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: Spider
+    clip: {fileID: 8300000, guid: d1b93212379f1ae41a79d65d2e8b32d7, type: 3}
+    volume: 1.2
+    pitch: 1
+    loop: 0
+    single: 0
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: Potion
+    clip: {fileID: 8300000, guid: 3c989158719be9243a42776f2b73af75, type: 3}
+    volume: 1.2
+    pitch: 1
+    loop: 0
+    single: 0
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: Success
+    clip: {fileID: 8300000, guid: 34f7a562dbbd05247a5855fd7c01dd71, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    single: 0
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: Win
+    clip: {fileID: 8300000, guid: 93e3d0ee3bce962428ffae05985566dd, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    single: 0
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: BossFight1
+    clip: {fileID: 8300000, guid: 9ff77df8246939b4591efd5e6578511f, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    single: 1
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: BossFight2
+    clip: {fileID: 8300000, guid: 47f02348869ca5346afb8078b6765281, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 1
+    single: 1
+    source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: Secret
+    clip: {fileID: 8300000, guid: 726666fca626f9d4197bb00d97e677d4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    single: 1
+    source: {fileID: 0}
+    mixer: {fileID: 0}

@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
+    private bool hasDoubleJump = true;
 
     [Header("Events")]
     [Space]
@@ -32,7 +33,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        m_Rigidbody2D = GetComponent<Rigidbody2D>();
+        m_Rigidbody2D = gameObject.GetComponentInParent<Rigidbody2D>();
+        //m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
         if (OnLandEvent == null)
             OnLandEvent = new UnityEvent();
@@ -53,8 +55,10 @@ public class PlayerMovement : MonoBehaviour
             if (colliders[i].gameObject != gameObject)
             {
                 m_Grounded = true;
-                if (!wasGrounded)
+                hasDoubleJump = true;
+                if (!wasGrounded){
                     OnLandEvent.Invoke();
+                }
             }
         }
     }
@@ -81,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (!m_wasCrouching)
                 {
+                    Debug.Log("Sent crouch event");
                     m_wasCrouching = true;
                     OnCrouchEvent.Invoke(true);
                 }
@@ -123,6 +128,13 @@ public class PlayerMovement : MonoBehaviour
                 Flip();
             }
         }
+
+        // If the player should double jump
+        if((!m_Grounded) && jump && hasDoubleJump) {
+            m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 0);
+            m_Rigidbody2D.AddForce(new Vector2(0, m_JumpForce*1.2f));
+            hasDoubleJump = false;
+        }
         // If the player should jump...
         if (m_Grounded && jump)
         {
@@ -130,6 +142,7 @@ public class PlayerMovement : MonoBehaviour
             m_Grounded = false;
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
         }
+        
     }
 
 
@@ -139,9 +152,16 @@ public class PlayerMovement : MonoBehaviour
         // Switch the way the player is labelled as facing.
         m_FacingRight = !m_FacingRight;
 
-        // Multiply the player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+        transform.Rotate(0f, 180f, 0f);
+        //Transform t = gameObject.GetComponentInChildren<Transform>();
+        //t.Rotate(0f, 180f, 0f);
+    }
+
+    public bool getGrounded(){
+        return m_Grounded;
+    }
+
+    public bool getIsFacingRight(){
+        return m_FacingRight;
     }
 }

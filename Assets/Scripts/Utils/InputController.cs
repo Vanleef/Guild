@@ -13,6 +13,7 @@ public class InputController : MonoBehaviour
     bool jump = false;
     bool crouch = false;
 
+    bool attack = false;
     // Update is called once per frame
     void Update()
     {
@@ -36,6 +37,32 @@ public class InputController : MonoBehaviour
             crouch = false;
         }
 
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            attack = true;
+            animatorPlayer.SetTrigger("Attack");
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            animatorPlayer.SetTrigger("Death");
+        }
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            animatorPlayer.SetTrigger("Hit");
+        }
+
+
+    }
+
+    private void HandleAttack()
+    {
+        if (attack)
+        {
+
+        }
     }
 
     public void onCrouching(bool isCrouching)
@@ -48,10 +75,16 @@ public class InputController : MonoBehaviour
         animatorPlayer.SetBool("isJumping", false);
     }
 
+    private void ResetAttack()
+    {
+        attack = false;
+    }
+
     void FixedUpdate()
     {
         // Move our character
         player.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
+        ResetAttack();
     }
 }

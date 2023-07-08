@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aeb5bf8f52117d469bc9126139e4ee7, type: 3}
+  m_Name: Boss Skarlett
+  m_EditorClassIdentifier: 
+  npcId: 008.Skarlett
+  hp: 800
+  speed: 3
+  attackDamage: 20
+  detectionRangeX: 10
+  detectionRangeY: 5
+  attackRangeX: 2
+  attackRangeY: 1
+  attackSpeed: 2

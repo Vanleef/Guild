@@ -1,0 +1,58 @@
+[
+    {
+        "ID": "q001",
+        "isMainQuest": "true",
+        "requiredLevel": 1,
+        "reward": 100,
+        "goal": {
+            "description": "Kill Moldrak",
+            "requiredAmount": 1,
+            "targetID": "003.Moldrak"
+        }
+    },
+    {
+        "ID": "q002",
+        "isMainQuest": "false",
+        "requiredLevel": 1,
+        "reward": 100,
+        "goal": {
+            "description": "Kill orcs",
+            "requiredAmount": 10,
+            "targetID": "001.Orc"
+        }
+    },
+    {
+        "ID": "q003",
+        "isMainQuest": "false",
+        "requiredLevel": 1,
+        "reward": 100,
+        "goal": {
+            "description": "Find the treasure",
+            "requiredAmount": 1,
+            "targetID": "treasure"
+        }
+    },
+    {
+        "ID": "q004",
+        "isMainQuest": "false",
+        "requiredLevel": 1,
+        "reward": 100,
+        "goal": {
+            "description": "Kill Skeleton Warriors",
+            "requiredAmount": 10,
+            "targetID": "004.SkeletonWarrior"
+        }
+    },
+    {
+        "ID": "q005",
+        "isMainQuest": "true",
+        "requiredLevel": 1,
+        "reward": 100,
+        "goal": {
+            "description": "Kill Skarlett",
+            "requiredAmount": 1,
+            "targetID": "008.Skarlett"
+        }
+    }
+
+]
